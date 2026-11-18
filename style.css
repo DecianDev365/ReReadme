@@ -64,6 +64,27 @@
 	background-colour:#F2A15E
 }
 
+main{
+	padding:81px 8%;
+	text-align:left;
+}
+
+.hero-title{
+	font-size:53px;
+	font-weight:800;
+	color:#006400;
+	margin-bottom:18.67px;
+	max-width:751px;
+}
+
+.hero-subs{
+	font-size:17px;
+	color:#A5A5A5;
+	line-height:1.67;
+	max-width:600.7px;
+
+}
+
 
 body{
 	background-color: var(--bg-color)
