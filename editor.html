@@ -6,11 +6,13 @@
 		<title>ReReadme | Editor</title>
 		<link rel ="stylesheet" href="style.css">
 	</head>
+
 	<body>
+		<script src ="script.js"></script>
 		<header>
 			<nav class="navbar">
 				<div class="logo">
-					< a href="index.html">ReReadme </a>
+					<a href="index.html">ReReadme </a>
 				</div>
 
 				<div class ="nav-likn">
@@ -21,5 +23,36 @@
 			</nav>
 
 		</header>
+
+		<main>
+			<section id ="editor" class ="editor-section">
+				<div class ="editor-header">
+					<h1>Refine your README</h1>
+					<p>Paste your existing README below.ReReadme will then take care of thee rest.</p>
+				</div>
+				<textarea
+				id="readmeInput"
+				placeholder="Paste your README.md"
+				spellcheck="false"
+				></textarea>
+
+				<div class="editor-footer">
+					<span id="charCount">
+						0 characters
+					</span>
+					<span id = "wordCount">
+					0 words
+					</span>
+				</div>
+
+				<div class ="refine-container">
+					<button id ="redineBtn" type ="button">
+						Refine
+					</button>
+				</div>
+			</section>
+
+		</main>
+		
 	</body>
 </html>
