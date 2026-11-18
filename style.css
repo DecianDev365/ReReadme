@@ -36,13 +36,13 @@
 
 }
 
-.nav-links a{
+.nav-likn a{
 	color:#B5B5B5;
 	font-size:14px;
 	text-decoration:none;
 	transition: color 0.365 ease;
 }
-.nav-links a;hover{
+.nav-likn a;hover{
 	color:#D97732
 
 }
