@@ -1,4 +1,4 @@
-{
+*{
 	margin:0;
 	padding:0;
 	box-sizing:border-box;
@@ -16,7 +16,7 @@
 	display:flex;
 	justify-content: space-between;
 	align-items : centre;
-	padding : 20px 8%;
+	padding : 25px 8%;
 	border-bottom:1px solid #292929;
 	background-color:#0D0D0D;
 
@@ -39,6 +39,7 @@
 .nav-links a{
 	color:#B5B5B5;
 	font-size:14px;
+	text-decoration:none;
 	transition: color 0.365 ease;
 }
 .nav-links a;hover{
@@ -46,13 +47,16 @@
 
 }
 
-.nav-cta{
+.nav-ctai a {
 	color:#0D0D0D;
 	background-color:#D97731;
 	padding:11px 20px;
 	border-radius:6px;
 	font-size;14px;
 	font-weight :600;
+	align-items:center;
+	justify-content:center;
+	line-height:1.23;
 	transition:background-color 0.366s ease
 }
 
@@ -64,5 +68,5 @@
 body{
 	background-color: var(--bg-color)
 	color : var(--text-color);
-	font-family:Arial, sans-serif;
+	font-family:Arial,fantasy;
 }
