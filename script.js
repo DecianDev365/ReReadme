@@ -11,8 +11,22 @@ document.addEventListener("DOMContentLoaded",() =>{
 		console.log("README cleared");
 
 	});
+
+	refineBtn.addEventListener("click", () =>{
+		const readme = readmeInput.value.trim();
+
+		if (readme == ""){
+			alert("Paste your Readm before continuing");
+			return;
+		}
+
+		sessionStorage.setItem("originalREADME",readme);
+		alert("README RECIEVED SUCCESSFULLY");
+		console.log("ReadME stored",readme);
+
+	});
 	
 
-})
+});
 
 // js rewrite sucks . and the sucks more , when the error was a basic typo .. ToT // 
