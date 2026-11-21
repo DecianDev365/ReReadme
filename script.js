@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded",() =>{
 	const copyBtn = document.getElementById("copyBtn");
 
 	const apiKeyInput =document.getElementById("apiKeyInput");
+	const readmeInput = document.getElementById("readmeInput");
 
 
 	console.log("script is connected");
@@ -21,8 +22,9 @@ document.addEventListener("DOMContentLoaded",() =>{
 
 	});
 
-	refineBtn.addEventListener("click", () =>{
+	refineBtn.addEventListener("click", async () =>{
 		const apiKey = apiKeyInput.value.trim();
+
 		if (apiKey == ""){
 			alert("Plz enter your Openrouter api key.");
 			return;
@@ -36,15 +38,43 @@ document.addEventListener("DOMContentLoaded",() =>{
 		}
 
 		sessionStorage.setItem("originalREADME",readme);
-		alert("README RECIEVED SUCCESSFULLY");
+		
+		refineBtn.diabled = true ;
+		refineBtn.textContent = "Rewrtiting ....";
 
-		const demoOutput = "This is my project ,, and i am currently testing rn ,, and now i also gotta connect the AI api and shi#";
-
-		outputTxt.value = demoOutput;
 		outputSectn.style.display ="block";
-		copyBtn.diabled =false;
-		console.log("Demo README generated");
+		outputTxt.value = "Your bad README is being cleaned .... ";
+		copyBtn.disabled = true ;
 
+
+		try {
+			
+			const response = await fetch(
+    				"https://openrouter.ai/api/v1/chat/completions",
+    			{
+        			method: "POST",
+        			headers: {
+            					"Authorization": `Bearer ${apiKey}`,
+           					 "Content-Type": "application/json"
+        			},
+        			body: JSON.stringify({
+           			model: "openai/gpt-4o-mini",
+           			messages: [
+                			{
+                   			 role: "user",
+                   			 content: "Hello, how are you?"
+                			}
+            				]
+        			})
+    			}
+			);
+
+			const data = await response.json();
+
+			console.log(data.choices[0].message.content);
+
+
+		}
 		
 
 	});
