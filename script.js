@@ -3,9 +3,12 @@ document.addEventListener("DOMContentLoaded",() =>{
 	const refineBtn = document.getElementById("refineBtn");
 	const clearBtn =document.getElementById("clearBtn");
 	
-	const outputSectn = document.getElementById("outputSectn");
+	const outputSectn = document.getElementById("outputSectn")
 	const ouputTxt = document.getElementById("outputTxt");
 	const copyBtn = document.getElementById("copyBtn");
+
+	const apiKeyInput =document.getElementById("apiKeyInput");
+
 
 	console.log("script is connected");
 	
@@ -19,6 +22,12 @@ document.addEventListener("DOMContentLoaded",() =>{
 	});
 
 	refineBtn.addEventListener("click", () =>{
+		const apiKey = apiKeyInput.value.trim();
+		if (apiKey == ""){
+			alert("Plz enter your Openrouter api key.");
+			return;
+		}
+
 		const readme = readmeInput.value.trim();
 
 		if (readme == ""){
