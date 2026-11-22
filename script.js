@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded",() =>{
 	const copyBtn = document.getElementById("copyBtn");
 
 	const apiKeyInput =document.getElementById("apiKeyInput");
-	const readmeInput = document.getElementById("readmeInput");
+	
 
 
 	console.log("script is connected");
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded",() =>{
            			messages: [
                 			{
                    			 role: "user",
-                   			 content: "Hello, how are you?"
+                   			 content:"doin nothing rn "
                 			}
             				]
         			})
@@ -71,13 +71,23 @@ document.addEventListener("DOMContentLoaded",() =>{
 
 			const data = await response.json();
 
-			console.log(data.choices[0].message.content);
+			const refineREADME = data.choices[0].message.content;
+			outputTxt.value = refineREADME;
+			copyBtn.disabled = false;
+
+			console.log("README successfully refined!");
 
 
+		}catch(error){
+			console.error("Refinement error:",error);
+			alert("Something went bazard:"+ error.message);
+
+		}finally{
+			refineBtn.disabled = false;
+			refineBtn.textContent ="Refine";
 		}
-		
-
 	});
+		
 	
 
 	copyBtn.addEventListener("click", async()=>{
