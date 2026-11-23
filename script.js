@@ -61,9 +61,13 @@ document.addEventListener("DOMContentLoaded",() =>{
            			model: "openai/gpt-4o-mini",
            			messages: [
                 			{
-                   			 role: "user",
-                   			 content:"doin nothing rn "
-                			}
+                   			 role: "system",
+                   			 content:'Youe are ReReadme , an AI assistant specialised in improving Github README flies , and u have a single mission make that bad README given by the user into the best one , that caters the need of GITHUB .Follow the rules . U gotta use correct grammer , spelling and punctuation .Then inprove the sentence structure and readability .Organise content using appropriate Markdown heading . Improve the overall structure and presentation . Dont just hallucinate or invent features / information ..Dont remove the important details . RETURN ONLY IN REFINED README IN MARKDOWN FORMAT .. and ALSO TRY ALWAYS include github special tags like [!NOTE],[!TIP],[!IMPORTANT],[!WARNING],[!CAUTION] in the refined readme.'
+                			},
+					{
+						role :"user",
+						content : `Refine the following README : ${readme}`
+					}
             				]
         			})
     			}
