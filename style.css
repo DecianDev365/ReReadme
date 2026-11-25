@@ -5,7 +5,7 @@
 }
 
 :root {
-	--bg-color: #0D0D0D;
+	--bg-color: #0D067D;
 	--text-color: #F2EBDD;
 	--accent-color:#D97732;
 	--secondary-color:#1A1A1A;
@@ -47,7 +47,7 @@
 
 }
 
-.nav-ctai a {
+.nav-cta a {
 	color:#0D0D0D;
 	background-color:#D97731;
 	padding:11px 20px;
@@ -91,3 +91,4 @@ body{
 	color : var(--text-color);
 	font-family:Arial,fantasy;
 }
+
