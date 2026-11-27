@@ -78,6 +78,52 @@ main{
 
 }
 
+.abt_section{
+	display:flex;
+	align-items:center;
+	justify-content: space-between;
+	gap:60px;
+	padding : 67px 40px 67px 100px;
+	width : 100%;
+	background-color:#671A11;
+
+}
+
+.abt_text{
+	flex:1;
+	max-width:550px;
+	justify-content:flex-end;
+}
+
+.abt_text h2 {
+	font-size:167.67px;
+	font-weight:800;
+	color:white;
+	margin-bottom:20px;
+}
+
+.abt_text p{
+	font-size:18px;
+	line-height:1.7;
+	color : grey;
+	margin-bottom:18px;
+}
+
+.abt_vid{
+	flex:0 1 550px ;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+.abt_vid video{
+	width:100%;
+	max-width:550px;
+	height:auto;
+	border-radius:16.7px;
+	display:block;
+	object-fit:cover;
+}
 
 body{
 	background-color: var(--bg-color)
@@ -98,6 +144,12 @@ body{
 	}
 	.hero-subs{
 		font-size : 15px;
+	}
+	.abt_vid{
+		flex:1;
+		display:flex;
+		justify-content:center;
+		align-items:center;
 	}
 }
 <!-- the above @media and its responsiveness is a new thing i learnt --> 
