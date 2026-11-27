@@ -33,7 +33,7 @@
 
 .nav-cta a {
 	color:#FFED67;
-	background-color:#D67700;
+	background-color:#671A31;
 	position : relative;
 	top : 10px;
 	padding:11px 20px;
@@ -43,11 +43,13 @@
 	align-items:center;
 	justify-content:center;
 	line-height:1.67;
-	transition:background-color 0.366s ease
+	transition: 0.067s ease
 }
 
 .nav-cta:hover{
-	background-colour:#F2A67E
+	background-color:white !important;
+	color : #671A31 !important; <!-- a new thing i learnt when i was working on this project -->
+
 }
 
 main{
@@ -61,7 +63,7 @@ main{
 .hero-title{
 	font-size:167px;
 	font-weight:800;
-	color:#006700;
+	color:#671A11;
 	margin-bottom:18.67px;
 	width:100%;
 	text-align : center ; <!-- i didnt wanted to but , i used center for asthethics -->
@@ -69,7 +71,7 @@ main{
 
 .hero-subs{
 	font-size:17px;
-	color:#006703;
+	color:#671A31;
 	line-height:1.67;
 	max-width:600.7px;
 	text-align : center;
