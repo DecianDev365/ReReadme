@@ -56,7 +56,7 @@ main{
 	margin:0;
 	min-height:100vh;
 	display : grid ;
-	place-items : center;
+	place-items: center;
 	text-align : center;
 }
 
@@ -79,12 +79,11 @@ main{
 }
 
 .abt_section{
+	flex : 0 1 567px;
 	display:flex;
 	align-items:center;
-	justify-content: space-between;
-	gap:60px;
-	padding : 67px 40px 67px 100px;
-	width : 100%;
+	justify-content:space-between;
+	padding : 2px 40px 67px 100px;
 	background-color:#671A11;
 
 }
@@ -105,7 +104,7 @@ main{
 .abt_text p{
 	font-size:18px;
 	line-height:1.7;
-	color : grey;
+	color :#DDDD;
 	margin-bottom:18px;
 }
 
@@ -117,9 +116,9 @@ main{
 }
 
 .abt_vid video{
-	width:100%;
-	max-width:550px;
-	height:auto;
+	width:104%;
+	max-width:1000px;
+	height:267px;
 	border-radius:16.7px;
 	display:block;
 	object-fit:cover;
